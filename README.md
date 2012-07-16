@@ -17,4 +17,4 @@ Pierre-Henry SORIA
 
 ## License
 
-Apache License, Version 2.0 or later; See the [LICENSE.txt](LICENSE.txt) file.
+Apache License, Version 2.0 or later; See the [LICENSE.txt](./LICENSE.txt) file.
