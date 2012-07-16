@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ph-config>
+
+  <app>
+    <def-main-page>main/index</def-main-page>
+    <not-found-page>error/404</not-found-page> 
+    <def-lang>en</def-lang> 
+    <analytics-id>UA-KEY</analytics-id>
+    <view-dir>/WEB-INF/pages/jsp/</view-dir>
+    <theme-name>base</theme-name>
+  </app>
+
+  <site>
+    <name>pH</name>
+    <title>Welcome pH</title>
+      <meta-description>Welcome to out website!</meta-description>
+      <meta-keywords>website,java,ph,pH7</meta-keywords>
+  </site>
+
+  <url>
+    <site>http://localhost:8080/PHMemberArea/</site>
+    <static>http://localhost:8080/PHMemberArea/static/</static>
+    <rewrite>false</rewrite>
+  </url>
+  
+  <path>
+    <public-root>/home/brussels/workspace/PHMemberArea/WebContent</public-root>
+  </path>
+  
+  <cookie>
+    <path>/</path>
+    <prefix>pH_</prefix> <!-- If you have multiple sites with this application on the same domain, the prefix is used to avoid the collision between the same cookie -->
+    <expiration>31536000</expiration>
+  </cookie>
+  
+  <email>
+     <contact-address>you@your-site.com</contact-address>
+  </email>
+
+</ph-config>

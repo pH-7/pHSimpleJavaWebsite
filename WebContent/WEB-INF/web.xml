@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:javaee="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <javaee:display-name>PHMember</javaee:display-name>
+  <filter>
+    <filter-name>TextFilter</filter-name>
+    <filter-class>com.coolonWeb.i18n.TextFilter</filter-class>
+  </filter>
+  <filter>
+    <filter-name>UserAcl</filter-name>
+    <filter-class>com.coolonWeb.filters.UserAcl</filter-class>
+  </filter>
+  <filter>
+    <filter-name>AdminAcl</filter-name>
+    <filter-class>com.coolonWeb.filters.AdminAcl</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>UserAcl</filter-name>
+    <url-pattern>/account/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>AdminAcl</filter-name>
+    <url-pattern>/admin/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>TextFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>PageRouter</servlet-name>
+    <servlet-class>com.coolonWeb.servlets.PageRouter</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PageRouter</servlet-name>
+    <url-pattern>/__initPage</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>__initPage</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

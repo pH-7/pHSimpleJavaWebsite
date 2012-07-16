@@ -1,0 +1,1 @@
+<p><small>YOUR ADVERTISE HERE - LEFT</small></p>
